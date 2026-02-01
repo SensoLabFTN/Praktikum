@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Računske vežbe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Teorija</a> |
+    <a href="exercises.html">Računske vežbe</a> |
+    <a href="labs.html">Laboratorijske</a>
+  </nav>
+
+  <h1>Računske vežbe</h1>
+  <p>Ovde studenti rešavaju zadatke i mogu proveriti svoje odgovore.</p>
+  <p>Primer zadatka: 2 + 2 = ?</p>
+  <input type="text" id="answer">
+  <button onclick="checkAnswer()">Proveri</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      const ans = document.getElementById("answer").value;
+      const result = document.getElementById("result");
+      if(ans.trim() === "4") result.innerText = "Tačno!";
+      else result.innerText = "Pogrešno, probaj opet.";
+    }
+  </script>
+</body>
+</html>
