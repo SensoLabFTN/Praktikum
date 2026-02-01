@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratorijske vežbe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Teorija</a> |
+    <a href="exercises.html">Računske vežbe</a> |
+    <a href="labs.html">Laboratorijske</a>
+  </nav>
+
+  <h1>Laboratorijske vežbe</h1>
+
+  <div id="quiz-section">
+    <p><strong>Da biste pristupili laboratorijskoj vežbi, prvo položite kviz:</strong></p>
+    <p>Pitanje: Koja je formula za električnu energiju?</p>
+    <input type="text" id="quiz-answer">
+    <button onclick="submitQuiz()">Predaj</button>
+    <p id="quiz-result"></p>
+  </div>
+
+  <div id="lab-content" style="display:none;">
+    <h2>Vežba 1: Merenje napona</h2>
+    <p>Ovde ide uputstvo za laboratorijsku vežbu.</p>
+  </div>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
