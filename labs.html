@@ -3,30 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Laboratorijske vežbe</title>
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Teorija</a> |
-    <a href="exercises.html">Računske vežbe</a> |
-    <a href="labs.html">Laboratorijske</a>
-  </nav>
 
-  <h1>Laboratorijske vežbe</h1>
+<script>
+  if (localStorage.getItem("authorized") !== "true") {
+    alert("Morate se prvo prijaviti.");
+    window.location.href = "index.html";
+  }
+</script>
 
-  <div id="quiz-section">
-    <p><strong>Da biste pristupili laboratorijskoj vežbi, prvo položite kviz:</strong></p>
-    <p>Pitanje: Koja je formula za električnu energiju?</p>
-    <input type="text" id="quiz-answer">
-    <button onclick="submitQuiz()">Predaj</button>
-    <p id="quiz-result"></p>
-  </div>
+<h1>Laboratorijska vežba 1</h1>
+<p>Dobrodošli! Pristup je odobren.</p>
 
-  <div id="lab-content" style="display:none;">
-    <h2>Vežba 1: Merenje napona</h2>
-    <p>Ovde ide uputstvo za laboratorijsku vežbu.</p>
-  </div>
+<p>Korisnik: <span id="email"></span></p>
 
-  <script src="js/quiz.js"></script>
+<script>
+  document.getElementById("email").innerText =
+    localStorage.getItem("userEmail");
+</script>
+
 </body>
 </html>
